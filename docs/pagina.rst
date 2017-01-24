@@ -1,0 +1,4 @@
+Sterfte
+=======
+
+.. include:: README.rst
