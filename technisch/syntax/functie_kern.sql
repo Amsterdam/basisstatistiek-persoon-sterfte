@@ -127,6 +127,12 @@ or
 	and
 		gemeente_id = 363
 	)
+and
+	(case when geldigheidsdatum_begin < kennisgevingsdatum_begin then
+		d.bs_nummer in (select bsnumm from bron.kw20171)
+	else
+		true
+	end)
 order by
 	a.persoon_id;
 
